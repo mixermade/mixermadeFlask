@@ -1,0 +1,32 @@
+.bodystyle{
+    color: #7f3b86;
+    background-color: lavenderblush;
+}
+.navbarstyle{
+    color: #6d2c75 !important;
+    background-color: #f3dfe6 !important;
+}
+.btn-primary{
+    background-color: #6d2c75;
+    color: #f3dfe6;
+    border-color: #6d2c75;
+}
+.btn.btn-primary:hover{
+    background-color: #481c4d;
+    color: #ad9fa4;
+    border-color: #481c4d;
+}
+.colorcard{
+    color: #6d2c75 !important;
+    background-color: #f3dfe6 !important;
+}
+.btn-dark{
+    border-color: #e5045f;
+    background-color: #e5045f;
+    color: #d7d0d9;
+}
+.btn.btn-dark:hover{
+    background-color: #e03975;
+    color: #d7d0d9;
+    border-color: #e03975;
+}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-sm" style="padding-top: 30px;">
+  <div class="row">
+      {% for user in users %}
+      {% if user != current_user %}
+    <div class="col">
+      <div class="card" style="width: 14rem;">
+        <img src="{{ user.avatar(100) }}" class="card-img-top" alt="...">
+        <div class="card-body colorcard">
+         <h5 class="card-title">{{ user.username }}</h5>
+         <h6 class="card-subtitle mb-2 text-muted">{{ user.email }}</h6>
+            {% if not current_user.is_friends(user) %}
+         <a type="button" class="btn btn-primary" href="{{ url_for("add_friend", username=user.username) }}">Add</a>
+            {% else %}
+         <a type="button" class="btn btn-dark" href="{{ url_for("remove_friend", username=user.username) }}">Unfriend</a>
+            {% endif %}
+        </div>
+      </div>
+    </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container-sm" style="width: 19%;
+    padding-top: 30px;">
+    <div class="row">
+    <div class="col">
+      <img src="{{ avi }}" alt=":(" style="border-radius: 40px">
+    </div>
+    <div class="col">
+      <h2>{{ name }}</h2>
+        <p>Join date: {{ date }}</p>
+    <a type="button" class="btn btn-primary" href="{{ url_for("send_mail") }}">Receive a message</a>
+    </div>
+    </div>
+    </div>
+{% endblock %}
